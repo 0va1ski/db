@@ -14,9 +14,9 @@ int main() {
     do {
         cout << "Enter length m (from 1 to " << MAX_SIZE << "): ";
         cin >> m;
-        if (cin.fail()) { // Введены не цифры
+        if (cin.fail()) {
             cin.clear();
-            cin.ignore(10000, '\n');
+            cin.ignore();
             m = 0;
         }
         if (m < 1 || m > MAX_SIZE) {
